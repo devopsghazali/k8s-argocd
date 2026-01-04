@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: register-app-svc
+  namespace: register
+spec:
+  type: ClusterIP
+  selector:
+    app: register-app
+  ports:
+  - port: 80
+    targetPort: 8080
